@@ -12,4 +12,7 @@ FROM gcr.io/distroless/base
 
 COPY --from=base /opt /
 
+VOLUME /data
+WORKDIR /data
+
 CMD [ "redis-server" ]
